@@ -474,46 +474,46 @@ console.log(removeIndex(5))
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
-// document.getElementById('container')
+document.getElementById('container')
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
-// document.getElementsByTagName('td')
+document.getElementsByTagName('td')
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
-// document.getElementsByName('td').forEach(td => console.log(td.innerText))
+document.getElementsByName('td').forEach(td => console.log(td.innerText))
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
-// document.getElementsByName('a').forEach(a => (a.style.backgroundColor = 'red'))
+document.getElementsByName('a').forEach(a => (a.style.backgroundColor = 'red'))
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
-// const myList = document.getElementById('myList')
-// const newLi = document.createElement('li')
-// myList.appendChild(newLi)
+const myList = document.getElementById('myList')
+const newLi = document.createElement('li')
+myList.appendChild(newLi)
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
-// document.querySelectorAll('#myList li').forEach(li => li.remove())
-// //opzione 2
-// document.getElementById('myList').innerHTML = ''
+document.querySelectorAll('#myList li').forEach(li => li.remove())
+//opzione 2
+document.getElementById('myList').innerHTML = ''
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
-// document.getElementsByName('tr').forEach(tr => tr.classList.add('test'))
+document.getElementsByName('tr').forEach(tr => tr.classList.add('test'))
 
 // [EXTRA] JS Avanzato
 
@@ -581,7 +581,7 @@ console.log(tree(5))
 */
 
 const isItPrime = number => {
-	let isPrime = true
+	let isItPrime = true
 	// check if number is equal to 1
 	if (number === 1) {
 		return false
@@ -589,16 +589,18 @@ const isItPrime = number => {
 	// check if number is greater than 1
 	else if (number > 1) {
 		// looping through 2 to number-1
+		// starting from 2 because is the first possible prime number
 		for (let i = 2; i < number; i++) {
 			if (number % i == 0) {
-				isPrime = false
+				isItPrime = false
 				break
 			}
 		}
-		return isPrime
+		return isItPrime
 	} else {
 		return false
 	}
 }
 
 console.log(isItPrime(10))
+console.log(isItPrime(89))

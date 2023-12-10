@@ -561,11 +561,8 @@ const tree = number => {
 		let branch = ''
 		for (let j = 0; j < leafs; j++) {
 			let currBranch = treeArr[j]
-
 			if (currBranch) {
-				currBranch = currBranch.split('')
-				currBranch.unshift(' ')
-				treeArr[j] = currBranch.join('')
+				treeArr[j] = ' ' + treeArr[j]
 			}
 			branch += '*'
 		}
